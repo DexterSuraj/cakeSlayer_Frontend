@@ -1,19 +1,27 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import { NavLink } from 'react-router-dom';
+
 
 export default function DisabledTabs() {
-  const [value, setValue] = React.useState(2);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
-    <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
-      <Tab label="Active" />
-      <Tab label="Disabled" disabled />
-      <Tab label="Active" />
-    </Tabs>
+ <>
+ <nav>
+  <ul>
+    <li>
+    <NavLink to={"/"}>
+      Home
+    </NavLink>
+  
+     <NavLink to={"/about"}>
+      About
+    </NavLink> 
+    <NavLink to={"/cart"}>
+      Cart
+    </NavLink>
+    </li>
+  </ul>
+ </nav>
+ </>
   );
 }

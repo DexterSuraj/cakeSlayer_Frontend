@@ -2,23 +2,22 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Navigation from './Components/Navigation';
-
+import Home from './Page/Home'
+import About from './Page/About'
+import Cart from './Page/Cart'
+import { Route,Routes } from 'react-router-dom'
 function App() {
-  const n=0;
- const [count, setCount]=useState(n);
-const handleClick=()=>{
-  setCount(p=>p+1);
-  setCount(p=>p+1);
-}
+
+
   return (
     <>
-    <Navigation/>
-      {count}
-      <button onClick={()=>{
-        handleClick()
-        }}>click</button>
-
+   
+    <Routes>
+      <Route  index={<Home/>}/>
+      <Route path="/home" element={<Home/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/cart" element={<Cart/>}/>
+    </Routes>
     </>
   )
 }
