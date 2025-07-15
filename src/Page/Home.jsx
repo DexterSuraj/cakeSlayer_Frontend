@@ -1,8 +1,12 @@
 import React from 'react'
+import DisabledTabs from '../Components/NavTabs'
+import NavTabs from '../Components/NavTabs'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <h1>Home</h1>
+    </>
   )
 }
 

@@ -1,12 +1,9 @@
-import * as React from 'react';
-import { NavLink } from 'react-router-dom';
-
-
-export default function DisabledTabs() {
-
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+const NavTabs = () => {
   return (
- <>
- <nav>
+    <>
+     <nav>
   <ul>
     <li>
     <NavLink to={"/"}>
@@ -22,6 +19,8 @@ export default function DisabledTabs() {
     </li>
   </ul>
  </nav>
- </>
-  );
+    </>
+  )
 }
+
+export default NavTabs
